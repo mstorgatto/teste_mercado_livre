@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import verificationPoints.LoginVerificationPoint;
@@ -41,7 +42,7 @@ public class LoginTestCase {
 		usernameTextField.sendKeys("marina_storgatto@hotmail.com");
 		usernameButton.click();
 
-		Thread.sleep(4000);
+		Thread.sleep(1000);
 		
 		WebElement passwordTextField = this.driver.findElement(By.id("password"));
 		WebElement passwordButton = this.driver.findElement(By.id("action-complete"));
@@ -49,15 +50,57 @@ public class LoginTestCase {
 		passwordTextField.sendKeys("Amor1963");
 		passwordButton.click();
 		
-		Thread.sleep(4000);
+		Thread.sleep(1000);
 		
 		WebElement sellButton = this.driver.findElement(By.xpath("/html/body/header/div/div[2]/div/ul/li[6]/a"));
 		sellButton.click();
 		
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		
-		WebElement typeButton = this.driver.findElement(By.xpath("//*[@id=\"SERVICES\"]/button"));
+		WebElement typeButton = this.driver.findElement(By.cssSelector("#SERVICES > button"));
 		typeButton.click();
+		
+		Thread.sleep(1000);
+		
+		WebElement ctypeButton = this.driver.findElement(By.xpath("/html/body/main/div/div/form/nav/a[3]"));
+		ctypeButton.click();
+		
+		Thread.sleep(1000);
+		
+		WebElement beautyButton = this.driver.findElement(By.xpath("/html/body/main/div/div/form/div/div[2]/div/select/option[3]"));
+		beautyButton.click();
+		
+		Thread.sleep(1000);
+		
+		WebElement clinicButton = this.driver.findElement(By.xpath("/html/body/main/div/div/form/div/div[2]/div[2]/select/option[2]"));
+		clinicButton.click();
+		
+		Thread.sleep(1000);
+		
+		WebElement massageButton = this.driver.findElement(By.xpath("/html/body/main/div/div/form/div/div[2]/div[3]/select/option[3]"));
+		massageButton.click();
+		
+		Thread.sleep(1000);
+	
+		WebElement doneButton = this.driver.findElement(By.xpath("/html/body/main/div/div/form/div/div[2]/div[4]/input[5]"));
+		doneButton.click();
+		
+		Thread.sleep(1000);
+		
+		WebElement titleTextField = this.driver.findElement(By.id("title"));
+		WebElement includedTextField = this.driver.findElement(By.id("included"));
+		WebElement notIncludedTextField = this.driver.findElement(By.id("not_included"));
+		
+		titleTextField.sendKeys("Massagem Estética");
+		includedTextField.sendKeys("Massagem Estética");
+		notIncludedTextField.sendKeys("Acupuntura");
+		
+		Thread.sleep(1000);
+		
+		
+		
+		
+		
 		
 		
 		
