@@ -90,10 +90,12 @@ public class LoginTestCase {
 		WebElement titleTextField = this.driver.findElement(By.id("title"));
 		WebElement includedTextField = this.driver.findElement(By.id("included"));
 		WebElement notIncludedTextField = this.driver.findElement(By.id("not_included"));
+		WebElement confirmButton = this.driver.findElement(By.xpath("//*[@id=\"_eventId_next\"]"));
 		
 		titleTextField.sendKeys("Massagem Estética");
 		includedTextField.sendKeys("Massagem Estética");
 		notIncludedTextField.sendKeys("Acupuntura");
+		confirmButton.click();
 		
 		Thread.sleep(1000);
 		
