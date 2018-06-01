@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import verificationPoints.LoginVerificationPoint;
@@ -99,9 +100,29 @@ public class LoginTestCase {
 		
 		Thread.sleep(1000);
 		
+		Select dropdownEstado = new Select(this.driver.findElement(By.id("state")));
+		dropdownEstado.selectByVisibleText("Rio Grande do Sul");
+		Thread.sleep(2000);
+		
+		Select dropdownCidade = new Select(this.driver.findElement(By.id("city")));
+		dropdownCidade.selectByVisibleText("Porto Alegre");
+		
+		WebElement streetTextField = this.driver.findElement(By.xpath("//*[@id=\"location-street\"]"));
+		WebElement houseNumberTextField = this.driver.findElement(By.xpath("//*[@id=\"location-number\"]"));
+		WebElement priceButton = this.driver.findElement(By.xpath("//*[@id=\"priceOption\"]"));
+		WebElement priceTextField = this.driver.findElement(By.xpath("//*[@id=\"price\"]"));
+		WebElement continButton = this.driver.findElement(By.xpath("//*[@id=\"_eventId_next\"]"));
+		
+		streetTextField.sendKeys("Rua Amaragi");
+		houseNumberTextField.sendKeys("62");
+		priceButton.click();
+		priceTextField.sendKeys("50000");
+		continButton.click();
 		
 		
 		
+		//WebElement estadoIndex = this.driver.findElement(By.id("state"));
+		//dropdown.selectByIndex();
 		
 		
 		
