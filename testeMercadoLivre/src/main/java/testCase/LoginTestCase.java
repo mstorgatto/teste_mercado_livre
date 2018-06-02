@@ -122,8 +122,8 @@ public class LoginTestCase {
 		streetTextField.sendKeys("Rua Amaragi");
 		WebElement houseNumberTextField = this.driver.findElement(By.xpath("//*[@id=\"location-number\"]"));
 		houseNumberTextField.sendKeys("62");
-		WebElement phoneTextField = this.driver.findElement(By.xpath("//*[@id=\"telephone\"]"));
-		phoneTextField.sendKeys("55984170177");
+		//WebElement phoneTextField = this.driver.findElement(By.xpath("//*[@id=\"telephone\"]"));
+		//phoneTextField.sendKeys("55984170177");
 		WebElement priceButton = this.driver.findElement(By.xpath("//*[@id=\"priceOption\"]"));
 		priceButton.click();
 		WebElement priceTextField = this.driver.findElement(By.xpath("//*[@id=\"price\"]"));
@@ -131,7 +131,20 @@ public class LoginTestCase {
 		WebElement continButton = this.driver.findElement(By.xpath("//*[@id=\"_eventId_next\"]"));
 		continButton.click();
 			
+		Thread.sleep(2000);
 		
+		WebElement saletypeButton = this.driver.findElement(By.xpath("//*[@id=\"free\"]"));
+		saletypeButton.click();
+		
+		WebElement confirmsaleButton = this.driver.findElement(By.xpath("//*[@id=\"_eventId_next\"]"));
+		confirmsaleButton.click();
+		
+		Thread.sleep(2000);
+		WebElement cpfTextField = this.driver.findElement(By.xpath("//*[@id=\"signUp_IDNumber\"]"));
+		cpfTextField.sendKeys("02956752090");
+		
+		WebElement adressButton = this.driver.findElement(By.xpath("//*[@id=\"953651525\"]"));
+		adressButton.click();
 		
 		
 		//WebElement estadoIndex = this.driver.findElement(By.id("state"));
