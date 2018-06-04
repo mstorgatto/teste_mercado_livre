@@ -156,9 +156,9 @@ public class LoginTestCase {
 		verificationpoint.checkHelloMessage();
 	}
 
-	//@After
-	//public void tearDown() {
-	//this.driver.quit();
-	//}
+	@After
+	public void tearDown() {
+	this.driver.quit();
+	}
 }
 
