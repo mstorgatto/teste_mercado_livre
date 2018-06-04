@@ -12,40 +12,25 @@ public class LoginAppObject {
 		this.driver = driver;
 	}
 	
-	public WebElement getNomeCompletoTextField() {
-		return this.driver.findElement(By.id("nome"));	
-	}
-	
-	public WebElement getEmailTextField() {
-		return this.driver.findElement(By.id("email"));
+	public WebElement getUsernameTextField() {
+		return this.driver.findElement(By.id("user_id"));
 		
 	}
 	
-	public WebElement getSenhaTextField() {
+	public WebElement getUsernameButton() {
+		return this.driver.findElement(By.xpath("//*[@id=\\\"login_user_form\\\"]/div[2]/input"));
+		
+	}
+	
+	public WebElement getPasswordTextField() {
 		return this.driver.findElement(By.id("password"));
 		
 	}
 	
-	public WebElement getConfirmaSenhaTextField() {
-		return this.driver.findElement(By.id("passconf"));
+	public WebElement getPasswordButton() {
+		return this.driver.findElement(By.id("action-complete"));
 		
 	}
-	
-	public WebElement getTelefoneTextField() {
-		return this.driver.findElement(By.id("telefone"));
 		
-	}
-	
-	public WebElement getCidadeComboBox() {
-		return this.driver.findElement(By.id("cidade"));
-		
-	}
-	
-	public WebElement getCadastrarButton() {
-		//return this.driver.findElement(By.className("btn btn-success"));
-		//return this.driver.findElement(By.cssSelector("#cadastrar > fieldset > div:nth-child(8) > div")); 
-		return this.driver.findElement(By.xpath("//*[@id=\"cadastrar\"]/fieldset/div[8]/div"));
-	}
-	
-		
+			
 }
