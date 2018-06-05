@@ -14,10 +14,11 @@ public class LoginTask {
 	public LoginTask(WebDriver driver) {
 		this.loginAppObject = new vendaAppObject(driver);		
 	}
-	public void LoginMercadoLivre
-	(String username, String password) {
+	public void UsernameMercadoLivre (String username) {
 		this.loginAppObject.getUsernameTextField().sendKeys(username);
 		this.loginAppObject.getUsernameButton().click();
+	}
+	public void PasswordMercadoLivre (String password) {
 		this.loginAppObject.getPasswordTextField().sendKeys(password);
 		this.loginAppObject.getPasswordButton().click();
 	}

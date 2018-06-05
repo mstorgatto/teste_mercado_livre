@@ -14,47 +14,91 @@ public class VendaTask {
 	public VendaTask(WebDriver driver) {
 		this.vendaAppObject = new vendaAppObject(driver);		
 	}
-	public void LoginMercadoLivre
-	(String username, String password) {
+	public void EnterMercadoLivre () {
+		this.vendaAppObject.getEnterButton().click();
+	}
+	public void UsernameMercadoLivre
+	(String username) {
 		this.vendaAppObject.getUsernameTextField().sendKeys(username);
 		this.vendaAppObject.getUsernameButton().click();
+	}
+	
+	public void PasswordMercadoLivre
+	(String password) {
 		this.vendaAppObject.getPasswordTextField().sendKeys(password);
 		this.vendaAppObject.getPasswordButton().click();
 	}
 	
-	public void VendaMercadoLivre
-	(String title, String included, String notincluded, String street, String housenumber, String phone,  String price, String cpf ) {
+	public void SellMercadoLivre () {
 		this.vendaAppObject.getSellButton().click();
-		this.vendaAppObject.getNewSellButton().click();
+	}
+	
+//	public void SellMercadoLivre2 () {
+//		this.vendaAppObject.getNewSellButton().click();
+//	}
+	
+	public void TypeMercadoLivre () {
 		this.vendaAppObject.getTypeButton().click();
+	}
+	
+	public void TypeMercadoLivre2 () {
 		this.vendaAppObject.get2TypeButton().click();
+	}
+	public void TypeMercadoLivre3 () {
 		this.vendaAppObject.getBeautyButton().click();
+	}
+	public void TypeMercadoLivre4 () {
 		this.vendaAppObject.getClinicButton().click();
+	}
+	public void TypeMercadoLivre5 () {
 		this.vendaAppObject.getMassageButton().click();
+	}
+	public void TypeMercadoLivre6 () {
 		this.vendaAppObject.getDoneButton().click();
+	}
+	public void SpecMercadoLivre (String title, String included, String notincluded) {
 		this.vendaAppObject.getTitleTextField().sendKeys(title);
 		this.vendaAppObject.getIncludedTextField().sendKeys(included);
 		this.vendaAppObject.getNotIncludedTextField().sendKeys(notincluded);
 		this.vendaAppObject.getConfirmButton().click();
-		((Select)this.vendaAppObject.getdropdownState()).selectByVisibleText("Rio Grande do Sul");
-		((Select)this.vendaAppObject.getdropdownCity()).selectByVisibleText("Rio Grande do Sul");
-		((Select)this.vendaAppObject.getdropdownNeighborhood()).selectByVisibleText("Rio Grande do Sul");
+	}
+	public void SpecMercadoLivre2 (String estado) {
+		new Select(this.vendaAppObject.getdropdownState()).selectByVisibleText(estado);
+	}
+	public void SpecMercadoLivre3 (String cidade) {	
+		new Select(this.vendaAppObject.getdropdownCity()).selectByVisibleText(cidade);
+	}
+	public void SpecMercadoLivre4 (String bairro) {	
+		new Select(this.vendaAppObject.getdropdownNeighborhood()).selectByVisibleText(bairro);
+	}
+//		((Select)this.vendaAppObject.getdropdownState()).selectByVisibleText(estado);
+//		((Select)this.vendaAppObject.getdropdownCity()).selectByVisibleText(cidade);
+//		((Select)this.vendaAppObject.getdropdownNeighborhood()).selectByVisibleText(bairro);
 		//new Select(this....dropdown....).selectBy....
+		
+	public void SpecMercadoLivre5 (String street, String housenumber, String price) {	
 		this.vendaAppObject.getStreetTextField().sendKeys(street);
 		this.vendaAppObject.getHouseNumberTextField().sendKeys(housenumber);
-		this.vendaAppObject.getPhoneTextField().sendKeys(phone);
+//		this.vendaAppObject.getPhoneTextField().sendKeys(phone);
 		this.vendaAppObject.getPriceButton().click();
 		this.vendaAppObject.getPriceTextField().sendKeys(price);
 		this.vendaAppObject.getContButton().click();
+	}
+	public void SellTypeMercadoLivre () {
 		this.vendaAppObject.getSellTypeButton().click();
 		this.vendaAppObject.getSaleButton().click();
+	}
+	public void ConfSaleMercadoLivre () {
 		this.vendaAppObject.getConfirmSaleButton().click();
+	}
+	public void FinishSaleMercadoLivre (String cpf) {
 		this.vendaAppObject.getCPFTextField().sendKeys(cpf);
-		this.vendaAppObject.getAdressButton().click();
-				
+//		this.vendaAppObject.getAdressButton().click();
+	}
+	
 		//new Select(this....dropdown....).selectBy....
 		//this.loginAppObject.getPasswordTextField().sendKeys(password);
 		//this.loginAppObject.getPasswordButton().click();	
-	}
+		//}
 	
 }

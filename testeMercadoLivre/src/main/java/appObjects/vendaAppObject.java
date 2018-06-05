@@ -12,13 +12,15 @@ public class vendaAppObject {
 	public vendaAppObject(WebDriver driver) {
 		this.driver = driver;
 	}
-	
+	public WebElement getEnterButton() {
+		return this.driver.findElement(By.xpath("//*[@id=\"nav-header-menu\"]/a[2]"));	
+	}
 	public WebElement getUsernameTextField() {
 		return this.driver.findElement(By.id("user_id"));	
 	}
 	
 	public WebElement getUsernameButton() {
-		return this.driver.findElement(By.xpath("//*[@id=\\\"login_user_form\\\"]/div[2]/input"));	
+		return this.driver.findElement(By.cssSelector("#login_user_form > div.ui-form__actions > input"));	
 	}
 	
 	public WebElement getPasswordTextField() {
@@ -33,9 +35,9 @@ public class vendaAppObject {
 		return this.driver.findElement(By.xpath("/html/body/header/div/div[2]/div/ul/li[6]/a"));
 	}
 	
-	public WebElement getNewSellButton() {
-		return this.driver.findElement(By.xpath("//*[@id=\"newListing\"]"));
-	}
+//	public WebElement getNewSellButton() {
+//		return this.driver.findElement(By.cssSelector("#newListing"));
+//	}
 	
 	public WebElement getTypeButton() {
 		return this.driver.findElement(By.cssSelector("#SERVICES > button"));
@@ -46,7 +48,7 @@ public class vendaAppObject {
 	}
 	
 	public WebElement getBeautyButton() {
-		return this.driver.findElement(By.xpath("/html/body/main/div/div/form/div/div[2]/div/select/option[3]"));
+		return this.driver.findElement(By.xpath("/html/body/main/div/div/form/div/div[2]/div[1]/select/option[3]"));
 	}
 	
 	public WebElement getClinicButton() {
@@ -58,23 +60,23 @@ public class vendaAppObject {
 	}
 
 	public WebElement getDoneButton() {
-		return this.driver.findElement(By.xpath("/html/body/main/div/div/form/div/div[2]/div[4]/input[5]"));
+		return this.driver.findElement(By.cssSelector("body > main > div > div > form > div > div.category-container.verticalName.platform-ML > div.category-column.actions.lastField > input.ch-btn.ch-btn-large"));
 	}
 
 	public WebElement getTitleTextField() {
-		return this.driver.findElement(By.id("title"));
+		return this.driver.findElement(By.xpath("//*[@id=\"title\"]"));
 	}
 	
 	public WebElement getIncludedTextField() {
-		return this.driver.findElement(By.id("included"));
+		return this.driver.findElement(By.xpath("//*[@id=\"included\"]"));
 	}
 	
 	public WebElement getNotIncludedTextField() {
-		return this.driver.findElement(By.id("not_included"));
+		return this.driver.findElement(By.xpath("//*[@id=\"not_included\"]"));
 	}
 	
 	public WebElement getConfirmButton() {
-		return this.driver.findElement(By.xpath("//*[@id=\"_eventId_next\"]"));
+		return this.driver.findElement(By.cssSelector("#_eventId_next"));
 	}
 	
 	public WebElement getdropdownState() {
@@ -97,9 +99,9 @@ public class vendaAppObject {
 		return this.driver.findElement(By.xpath("//*[@id=\"location-number\"]"));
 	}
 	
-	public WebElement getPhoneTextField() {
-		return this.driver.findElement(By.xpath("//*[@id=\"telephone\"]"));	
-	}
+//	public WebElement getPhoneTextField() {
+//		return this.driver.findElement(By.xpath("//*[@id=\"telephone\"]"));	
+//	}
 	
 	public WebElement getPriceButton() {
 		return this.driver.findElement(By.xpath("//*[@id=\"priceOption\"]"));
@@ -129,8 +131,8 @@ public class vendaAppObject {
 		return this.driver.findElement(By.xpath("//*[@id=\"signUp_IDNumber\"]"));
 	}
 	
-	public WebElement getAdressButton() {
-		return this.driver.findElement(By.xpath("//*[@id=\"953651525\"]"));
-	}
+//	public WebElement getAdressButton() {
+//		return this.driver.findElement(By.xpath("//*[@id=\"953651525\"]"));
+//	}
 	
 }
