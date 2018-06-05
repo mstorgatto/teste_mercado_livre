@@ -22,8 +22,8 @@ public class Login {
 		this.loginAppObject.getPasswordButton().click();
 		
 	}
-	
-	public void VendaMercadoLivre(String title, String included, String notincluded, String passwordbutton) {
+	public void VendaMercadoLivre
+	(String title, String included, String notincluded, String passwordbutton, String street, String housenumber, String phone ) {
 		this.loginAppObject.getSellButton().click();
 		this.loginAppObject.getNewSellButton().click();
 		this.loginAppObject.getTypeButton().click();
@@ -43,7 +43,7 @@ public class Login {
 		((Select)this.loginAppObject.getdropdownNeighborhood()).selectByVisibleText("Rio Grande do Sul");
 		//new Select(this....dropdown....).selectBy....
 		this.loginAppObject.getStreetTextField().sendKeys(street);
-		this.loginAppObject.getHouseNumberTextField().sendKeys(housenuber);
+		this.loginAppObject.getHouseNumberTextField().sendKeys(housenumber);
 		this.loginAppObject.getPhoneTextField().sendKeys(phone);
 		
 		
