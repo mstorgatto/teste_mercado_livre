@@ -105,11 +105,11 @@ public class vendaAppObject {
 		return this.driver.findElement(By.xpath("//*[@id=\"priceOption\"]"));
 	}
 	
-	public WebElement getPriceTextfield() {
+	public WebElement getPriceTextField() {
 		return this.driver.findElement(By.xpath("//*[@id=\"price\"]"));
 	}
 	
-	public WebElement getContinButton() {
+	public WebElement getContButton() {
 		return this.driver.findElement(By.xpath("//*[@id=\"_eventId_next\"]"));
 	}
 	
@@ -117,7 +117,7 @@ public class vendaAppObject {
 		return this.driver.findElement(By.xpath("//*[@id=\"free\"]"));
 	}
 	
-	public WebElement getSaleTypeButton() {
+	public WebElement getSaleButton() {
 		return this.driver.findElement(By.xpath("//*[@id=\"free\"]"));
 	}
 	

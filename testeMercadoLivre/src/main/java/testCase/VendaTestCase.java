@@ -8,21 +8,21 @@ import com.aventstack.extentreports.Status;
 import framework.Drivers;
 import framework.Report;
 import framework.ScreenShot;
-import task.LoginTask;
+import task.VendaTask;
 import verificationPoints.LoginVerificationPoint;
 
-public class LoginTestCase {
+public class VendaTestCase {
 	
 	private WebDriver driver;
 	
-	public LoginTask homePage;
+	public VendaTask homePage;
 	private LoginVerificationPoint verificationPoint;
 	
 	@Before
 	public void setup() {
 		Report.startTest("Valid Login.");
 		driver = Drivers.getChromeDriver();
-		homePage= new LoginTask (driver);
+		homePage= new VendaTask (driver);
 		verificationPoint = new LoginVerificationPoint(driver);
 	}
 		
@@ -34,9 +34,11 @@ public class LoginTestCase {
 		Report.log(Status.INFO,"The Website has started.", ScreenShot.capture(driver));
 		homePage.LoginMercadoLivre("mstorgatto@gmail.com", "Amor1963");
 		
+		homePage.VendaMercadoLivre("Massagem Estetica", "Massagem Estetica Modeladora", "Acupuntura", "Rua Amaragi", "62", "55984170177", "50000", "05956752090");
+	
 		Thread.sleep(2000);
 	
-		Report.log(Status.INFO,"The Login is complete.", ScreenShot.capture(driver));
+		Report.log(Status.INFO,"The Sell is complete.", ScreenShot.capture(driver));
 	
 		verificationPoint.checkMercadoLivreMessage();
 		}
