@@ -11,14 +11,18 @@ public class LoginAppObject {
 	public LoginAppObject(WebDriver driver) {
 		this.driver = driver;
 	}
-	
+	public WebElement getEnterButton() {
+		return this.driver.findElement(By.xpath("//*[@id=\"nav-header-menu\"]/a[2]"));	
+	}
+//	public WebElement getNewUserButton() {
+//		return this.driver.findElement(By.cssSelector("//*[@id=\"change-user-link\"]"));
+//	}
 	public WebElement getUsernameTextField() {
-		return this.driver.findElement(By.id("user_id"));
-		
+		return this.driver.findElement(By.cssSelector("#user_id"));
 	}
 	
 	public WebElement getUsernameButton() {
-		return this.driver.findElement(By.xpath("//*[@id=\\\"login_user_form\\\"]/div[2]/input"));
+		return this.driver.findElement(By.xpath("//*[@id=\"login_user_form\"]/div[2]/input"));
 		
 	}
 	

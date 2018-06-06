@@ -99,9 +99,9 @@ public class vendaAppObject {
 		return this.driver.findElement(By.xpath("//*[@id=\"location-number\"]"));
 	}
 	
-//	public WebElement getPhoneTextField() {
-//		return this.driver.findElement(By.xpath("//*[@id=\"telephone\"]"));	
-//	}
+	public WebElement getPhoneTextField() {
+		return this.driver.findElement(By.xpath("//*[@id=\"telephone\"]"));	
+	}
 	
 	public WebElement getPriceButton() {
 		return this.driver.findElement(By.xpath("//*[@id=\"priceOption\"]"));
@@ -131,8 +131,11 @@ public class vendaAppObject {
 		return this.driver.findElement(By.xpath("//*[@id=\"signUp_IDNumber\"]"));
 	}
 	
-//	public WebElement getAdressButton() {
-//		return this.driver.findElement(By.xpath("//*[@id=\"953651525\"]"));
-//	}
+	public WebElement getPhone2Button() {
+		return this.driver.findElement(By.xpath("//*[@id=\"signupPhoneNumberSyi\"]"));
+	}
+	public WebElement getSellFinalButton() {
+		return this.driver.findElement(By.xpath("//*[@id=\"submit-address\"]"));
+	}
 	
 }

@@ -20,12 +20,18 @@ public class VendaTask {
 	public void UsernameMercadoLivre
 	(String username) {
 		this.vendaAppObject.getUsernameTextField().sendKeys(username);
+	}
+	public void UsernameMercadoLivre2
+	() {
 		this.vendaAppObject.getUsernameButton().click();
 	}
 	
 	public void PasswordMercadoLivre
 	(String password) {
 		this.vendaAppObject.getPasswordTextField().sendKeys(password);
+	}
+	public void PasswordMercadoLivre2
+	() {
 		this.vendaAppObject.getPasswordButton().click();
 	}
 	
@@ -56,10 +62,14 @@ public class VendaTask {
 	public void TypeMercadoLivre6 () {
 		this.vendaAppObject.getDoneButton().click();
 	}
-	public void SpecMercadoLivre (String title, String included, String notincluded) {
+	public void SpecMercadoLivre
+	(String title, String included, String notincluded) {
 		this.vendaAppObject.getTitleTextField().sendKeys(title);
 		this.vendaAppObject.getIncludedTextField().sendKeys(included);
 		this.vendaAppObject.getNotIncludedTextField().sendKeys(notincluded);
+	}
+	public void SpecMercadoLivre1
+	() {
 		this.vendaAppObject.getConfirmButton().click();
 	}
 	public void SpecMercadoLivre2 (String estado) {
@@ -76,24 +86,30 @@ public class VendaTask {
 //		((Select)this.vendaAppObject.getdropdownNeighborhood()).selectByVisibleText(bairro);
 		//new Select(this....dropdown....).selectBy....
 		
-	public void SpecMercadoLivre5 (String street, String housenumber, String price) {	
+	public void SpecMercadoLivre5
+	(String street, String housenumber, String phone, String price) {	
 		this.vendaAppObject.getStreetTextField().sendKeys(street);
 		this.vendaAppObject.getHouseNumberTextField().sendKeys(housenumber);
-//		this.vendaAppObject.getPhoneTextField().sendKeys(phone);
+		this.vendaAppObject.getPhoneTextField().sendKeys(phone);
 		this.vendaAppObject.getPriceButton().click();
 		this.vendaAppObject.getPriceTextField().sendKeys(price);
+		}
+	public void SpecMercadolivre6() {
 		this.vendaAppObject.getContButton().click();
-	}
+		}
 	public void SellTypeMercadoLivre () {
 		this.vendaAppObject.getSellTypeButton().click();
 		this.vendaAppObject.getSaleButton().click();
-	}
+		}
 	public void ConfSaleMercadoLivre () {
 		this.vendaAppObject.getConfirmSaleButton().click();
-	}
-	public void FinishSaleMercadoLivre (String cpf) {
+		}
+	public void FinishSaleMercadoLivre (String cpf, String phone2) {
 		this.vendaAppObject.getCPFTextField().sendKeys(cpf);
-//		this.vendaAppObject.getAdressButton().click();
+		this.vendaAppObject.getPhone2Button().sendKeys(phone2);
+		}
+	public void SellDoneMercadoLivre () {
+		this.vendaAppObject.getSellFinalButton().click();
 	}
 	
 		//new Select(this....dropdown....).selectBy....
