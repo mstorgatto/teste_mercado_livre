@@ -58,7 +58,7 @@ public class LoginTestCase {
 		Report.log(Status.INFO,"Send the password.", ScreenShot.capture(driver));
 		homePage.PasswordMercadoLivre2();
 		Thread.sleep(1000);
-		Report.log(Status.INFO,"The Login is complete.", ScreenShot.capture(driver));
+		Report.log(Status.INFO,"Login is complete.", ScreenShot.capture(driver));
 		
 		
 	
